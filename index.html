@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS Mod Editor (Simplified)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="editor-container">
+        <div class="sidebar">
+            <h2>🛠️ Propriétés & Outils</h2>
+            <div id="properties-panel">
+                <p>Sélectionner un élément (Acteur, Caméra) pour afficher les propriétés.</p>
+                </div>
+            <button onclick="addKeyframe()">➕ Ajouter Keyframe</button>
+        </div>
+
+        <div class="viewport">
+            <h1>🌍 Zone de Prévisualisation</h1>
+            <div id="actor" class="animatable-object"></div>
+        </div>
+    </div>
+
+    <div class="timeline-container">
+        <h2>🎬 Timeline</h2>
+        <div class="controls">
+            <button onclick="playAnimation()">▶️ Play</button>
+            <span id="current-frame">Frame: 0</span>
+        </div>
+        
+        <div id="timeline-tracks" class="tracks">
+            <div class="track">
+                <span class="track-label">Acteur</span>
+                <div class="keyframe-area" id="actor-track">
+                    </div>
+            </div>
+            
+            <div class="track">
+                <span class="track-label">Caméra</span>
+                <div class="keyframe-area" id="camera-track">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
